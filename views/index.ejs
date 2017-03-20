@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Dylan's Interesting Collection Of Products</h1>
+
+  <ul class="products">
+  <% for(var i=0; i<products.length; i++) {%>
+    <li class="product">
+      <span><%= products[i].name %></span>
+      <span><%= products[i].price %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <h2>Add A Product</h2>
+
+  <form action="/products" method="POST">
+    <input type="text" placeholder="Product Name" name="product">
+    <input type="text" placeholder="Product Price" name="price">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div>
+    <h2>Update Products</h2>
+    <button id="update"> Update </button>
+  </div>
+
+  <div>
+    <h2>Delete Products</h2>
+    <button id="delete"> Delete </button>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
